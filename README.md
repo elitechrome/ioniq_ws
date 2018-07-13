@@ -29,9 +29,12 @@ $ candump -L can0 > can0.log
 ## Play logged CAN data
 ```
 $ canplayer -I candump-2017-05-19_101301.log vcan0=can0
-``` 
+```
 
-
+## Publish CAN data on ROS
+```
+$ rosrun socketcan_bridge socketcan_to_topic_node _can_device:=can0
+```
 
 ## Further reading
 https://www.kernel.org/doc/Documentation/networking/can.txt

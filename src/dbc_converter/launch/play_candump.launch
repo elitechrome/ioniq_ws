@@ -1,0 +1,8 @@
+<launch>
+  <node name="ioniq_ccan" pkg="socketcan_bridge" type="socketcan_bridge_node">
+    <param name="can_device" value="vcan0"/>
+  </node>
+  <node name="ioniq_egwy" pkg="socketcan_bridge" type="socketcan_bridge_node">
+    <param name="can_device" value="vcan1"/>
+  </node>
+</launch>

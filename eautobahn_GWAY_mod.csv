@@ -1,0 +1,77 @@
+ID,Frame Name,Cycle Time [ms],Launch Type,Launch Parameter,Signal Byte No.,Signal Bit No.,Signal Name,Signal Function,Signal Length [Bit],Signal Default, Signal Not Available,Byteorder,is signed,WHJ_Vehicle,MoVal,MoConf,Value,Name / Phys. Range,Function / Increment Unit
+156h,MoConf,,,,1,0,APM_En,,1,,,i,u,r,,s,,0.0..1.0
+156h,MoConf,,,,1,2,APM_IGNORE,ignore Override,1,,,i,u,r,,s,,0.0..1.0
+156h,MoConf,,,,2,0,APM_Slevel,"Slevel : Angle Speed Level ( it means Steer Angle speed control command in preversion)
+1 level is incremented by 2deg/s ",8,,,i,u,r,,s,,0.0..510.0,2.0
+156h,MoConf,,,,3,0,ASM_En,,1,,,i,u,r,,s,ASM_Disable,0
+156h,MoConf,,,,3,0,ASM_En,,1,,,i,u,r,,s,ASM_En_Rdy,1
+156h,MoConf,,,,3,0,ASM_En,,1,,,i,u,r,,s,ASM_En_Engaged,2
+156h,MoConf,,,,3,4,ASM_StopRequest,,1,,,i,u,r,,s,,0.0..1.0
+156h,MoConf,,,,5,0,AGM_En,,1,,,i,u,r,,s,,0.0..1.0
+156h,MoConf,,,,5,1,AGM_Brake_ACT,,1,,,i,u,,,s,,0.0..1.0
+156h,MoConf,,,,6,0,BCM_En,,1,,,i,u,r,,s,,0.0..0.0
+156h,MoConf,,,,8,0,Mo_AlvCnt,,8,,,i,u,r,,s,,0.0..255.0
+157h,MoVal,,,,1,0,Steer_Cmd,,16,,,i,s,r,s,,,-3276.8..3276.7,0.1  deg
+157h,MoVal,,,,3,0,Setspeed,,8,,,i,u,,s,,,0.0..255.0,kph
+157h,MoVal,,,,4,0,aReqMax_Cmd,,16,,,i,u,r,s,,,0.0..0.0,0.01  m/s^2
+157h,MoVal,,,,7,0,Gear_Cmd,,4,,,i,u,r,s,,Parking level,0
+157h,MoVal,,,,7,0,Gear_Cmd,,4,,,i,u,r,s,,Driving level,5
+157h,MoVal,,,,7,0,Gear_Cmd,,4,,,i,u,r,s,,Neutral level,6
+157h,MoVal,,,,7,0,Gear_Cmd,,4,,,i,u,r,s,,Rear level,7
+157h,MoVal,,,,7,4,BCM_Cmd,,4,,,i,u,r,s,,None,0
+157h,MoVal,,,,7,4,BCM_Cmd,,4,,,i,u,r,s,,Left_Turn_Sig,1
+157h,MoVal,,,,7,4,BCM_Cmd,,4,,,i,u,r,s,,Right_Turn_Sig,2
+157h,MoVal,,,,7,4,BCM_Cmd,,4,,,i,u,r,s,,Hazardous sig,3
+157h,MoVal,,,,7,4,BCM_Cmd,,4,,,i,u,r,s,,reserved,4
+157h,MoVal,,,,7,4,BCM_Cmd,,4,,,i,u,r,s,,reserved,5
+157h,MoVal,,,,7,4,BCM_Cmd,,4,,,i,u,r,s,,reserved,6
+157h,MoVal,,,,7,4,BCM_Cmd,,4,,,i,u,r,s,,reserved,7
+710h,APM,,,,1,0,APM_Fd_En,,1,,,i,u,s,,,,0.0..0.0
+710h,APM,,,,1,1,Mo_Fd_State,,3,,,i,u,s,,,,0.0..8.0
+710h,APM,,,,1,4,APM_Fd_ErrBit_PD,,1,,,i,u,s,,,,0.0..1.0
+710h,APM,,,,1,5,APM_Fd_ErrBit_EPS,,1,,,i,u,s,,,,0.0..1.0
+710h,APM,,,,1,6,APM_Fd_ErrBit_VInfo,,1,,,i,u,s,,,,0.0..1.0
+710h,APM,,,,1,7,APM_Fd_ErrBit_SAS,,1,,,i,u,s,,,,0.0..1.0
+710h,APM,,,,2,0,APM_Fd_Override,,1,,,i,u,s,,,,0.0..1.0
+710h,APM,,,,2,4,APM_Fd_Ovrd_Ignore,,1,,,i,u,s,,,,0.0..0.0
+710h,APM,,,,3,0,APM_Fd_SteerAngle,,16,,,i,s,s,,,,-3276.8..3276.7,0.1  deg
+710h,APM,,,,5,0,APM_Fd_Steer_Torq,,12,,,i,u,s,,,,-20.48..20.47,0.01  Nm
+710h,APM,,,,6,4,APM_Fd_Str_out_tq,,12,,,i,u,s,,,,0.0..0.0,0.1  Nm
+710h,APM,,,,8,0,Mo_Fd_AlvCnt,,8,,,i,u,s,,,,0.0..255.0
+711h,ASM,,,,1,0,ASM_Fd_En,,1,,,i,u,s,,,,0.0..1.0
+711h,ASM,,,,1,1,Mo_Fd_State,,3,,,i,u,s,,,,0.0..8.0
+711h,ASM,,,,1,4,ASM_Fd_ErrBit_PD,,1,,,i,u,s,,,,0.0..1.0
+711h,ASM,,,,1,6,ASM_Fd_ErrBit_TCU,,1,,,i,u,s,,,,0.0..1.0
+711h,ASM,,,,1,7,ASM_Fd_ErrBit_ACC,,1,,,i,u,s,,,,0.0..1.0
+711h,ASM,,,,2,0,ASM_Fd_VSpeed,,8,,,i,s,s,,,,0.0..0.0
+711h,ASM,,,,3,0,ASM_Fd_aeb_seq,,3,,,i,u,s,,,,0.0..7.0
+711h,ASM,,,,8,0,Mo_Fd_AlvCnt,,8,,,i,u,s,,,,0.0..255.0
+712h,AGM,,,,1,0,AGM_Fd_Enable,,1,,,i,u,s,,,,0.0..0.0
+712h,AGM,,,,1,1,Mo_Fd_State,,3,,,i,u,s,,,,0.0..8.0
+712h,AGM,,,,1,4,AGM_Fd_ErrBit_PD,,1,,,i,u,s,,,,0.0..0.0
+712h,AGM,,,,1,5,AGM_Fd_ErrBit_PT,PT: Power Train part,1,,,i,u,s,,,,0.0..1.0
+712h,AGM,,,,1,6,AGM_Fd_ErrBit_VInfo,,1,,,i,u,s,,,,0.0..0.0
+712h,AGM,,,,1,7,AGM_Fd_ErrBit_SBW,,1,,,i,u,s,,,,0.0..1.0
+712h,AGM,,,,2,0,AGM_Fd_Shift_cmd,,3,,,i,u,s,,,Parking level,0
+712h,AGM,,,,2,0,AGM_Fd_Shift_cmd,,3,,,i,u,s,,,Driving level,5
+712h,AGM,,,,2,0,AGM_Fd_Shift_cmd,,3,,,i,u,s,,,Neutral level,6
+712h,AGM,,,,2,0,AGM_Fd_Shift_cmd,,3,,,i,u,s,,,Rear level,7
+712h,AGM,,,,2,4,AGM_Fd_Brake_Push,,1,,,i,u,s,,,,0.0..0.0
+712h,AGM,,,,8,0,Mo_Fd_AlvCnt,,8,,,i,u,s,,,,0.0..255.0
+71Fh,MISC_Sig,,,,1,0,Switch_Plus,,1,,,i,u,s,,,,0.0..0.0
+71Fh,MISC_Sig,,,,1,1,Switch_Minus,,1,,,i,u,s,,,,0.0..1.0
+71Fh,MISC_Sig,,,,1,2,Switch_Cancel,,1,,,i,u,s,,,,0.0..1.0
+71Fh,MISC_Sig,,,,1,4,Switch_ACC,,1,,,i,u,s,,,,0.0..1.0
+71Fh,MISC_Sig,,,,1,5,Accel_pedal_Push,,1,,,i,u,s,,,,0.0..1.0
+71Fh,MISC_Sig,,,,1,6,Brake_Pedal_Push,,1,,,i,u,s,,,,0.0..0.0
+71Fh,MISC_Sig,,,,1,7,ACC_Enable,"This signal is very important.. When car turn on autonomous driving mode, if this signal is off for 1sec, then car's tcu is malfuction.",1,,,i,u,s,,,,0.0..0.0
+71Fh,MISC_Sig,,,,2,0,Mo_AlvCnt,,8,,,i,u,s,,,,0.0..255.0
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,ASM_Fd_NoResp_ACC,,1,,,i,u,,,,,0.0..0.0
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,ASM_aeb_seq,,3,,,i,u,,,,AEB_None,0
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,ASM_aeb_seq,,3,,,i,u,,,,AEB_Warn1,1
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,ASM_aeb_seq,,3,,,i,u,,,,AEB_Warn2,2
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,ASM_aeb_seq,,3,,,i,u,,,,AEB_WAarn3,3
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,ASM_aeb_seq,,3,,,i,u,,,,AEB_Stop,4
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,Aeb_DecCmd,,8,,,i,u,,,,,0.0..0.0,0.01  g
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,reserved_Acc,,8,,,i,u,,,,,0.0..0.0
+40000000h,VECTOR__INDEPENDENT_SIG_MSG,,,,1,0,reserved_br,,16,,,i,u,,,,,0.0..0.0

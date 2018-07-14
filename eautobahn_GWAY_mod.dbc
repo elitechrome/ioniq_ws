@@ -1,0 +1,127 @@
+VERSION ""
+NS_ :
+NS_DESC_
+CM_
+BA_DEF_
+BA_
+VAL_
+CAT_DEF_
+CAT_
+FILTER
+BA_DEF_DEF_
+EV_DATA_
+ENVVAR_DATA_
+SGTYPE_
+SGTYPE_VAL_
+BA_DEF_SGTYPE_
+BA_SGTYPE_
+SIG_TYPE_REF_
+VAL_TABLE_
+SIG_GROUP_
+SIG_VALTYPE_
+SIGTYPE_VALTYPE_
+BO_TX_BU_
+BA_DEF_REL_
+BA_REL_
+BA_DEF_DEF_REL_
+BU_SG_REL_
+BU_EV_REL_
+BU_BO_REL_
+SG_MUL_VAL_
+BS_:
+BU_: WHJ_Vehicle MoVal MoConf
+VAL_TABLE_ vtSig_Aeb_Seq 4 "AEB_Stop" 3 "AEB_WAarn3" 2 "AEB_Warn2" 1 "AEB_Warn1" 0 "AEB_None" ;
+VAL_TABLE_ vtSig_Mo_State 4 "Operaing_Auto_rdy" 3 "reserved" 2 "Operating_state" 1 "Initial_state" 0 "Abnormal_state" ;
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ ASM_Fd_NoResp_ACC : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ reserved_Acc : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ reserved_br : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aeb_DecCmd : 0|8@1+ (0.01,0) [0|0] "g" Vector__XXX
+ SG_ ASM_aeb_seq : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1823 MISC_Sig: 2 WHJ_Vehicle
+ SG_ ACC_Enable : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mo_AlvCnt : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Accel_pedal_Push : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Brake_Pedal_Push : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Switch_Cancel : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Switch_Minus : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Switch_ACC : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Switch_Plus : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1810 AGM: 8 WHJ_Vehicle
+ SG_ AGM_Fd_Shift_cmd : 8|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AGM_Fd_Enable : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AGM_Fd_ErrBit_VInfo : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AGM_Fd_ErrBit_SBW : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AGM_Fd_ErrBit_PT : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AGM_Fd_ErrBit_PD : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AGM_Fd_Brake_Push : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mo_Fd_State : 1|3@1+ (1,0) [0|8] "" Vector__XXX
+ SG_ Mo_Fd_AlvCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+BO_ 1809 ASM: 8 WHJ_Vehicle
+ SG_ ASM_Fd_aeb_seq : 16|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ASM_Fd_VSpeed : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Mo_Fd_State : 1|3@1+ (1,0) [0|8] "" Vector__XXX
+ SG_ ASM_Fd_En : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ASM_Fd_ErrBit_ACC : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ASM_Fd_ErrBit_TCU : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ASM_Fd_ErrBit_PD : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mo_Fd_AlvCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+BO_ 1808 APM: 8 WHJ_Vehicle
+ SG_ APM_Fd_Str_out_tq : 44|12@1+ (0.1,-204.8) [0|0] "Nm" Vector__XXX
+ SG_ APM_Fd_ErrBit_SAS : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ APM_Fd_ErrBit_VInfo : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ APM_Fd_ErrBit_EPS : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ APM_Fd_Steer_Torq : 32|12@1+ (0.01,-20.48) [-20.48|20.47] "Nm" Vector__XXX
+ SG_ Mo_Fd_AlvCnt : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ APM_Fd_Ovrd_Ignore : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mo_Fd_State : 1|3@1+ (1,0) [0|8] "" Vector__XXX
+ SG_ APM_Fd_SteerAngle : 16|16@1- (0.1,0) [-3276.8|3276.7] "deg" Vector__XXX
+ SG_ APM_Fd_Override : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ APM_Fd_ErrBit_PD : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ APM_Fd_En : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 343 MoVal: 8 MoVal
+ SG_ Setspeed : 16|8@1+ (1,0) [0|255] "kph" Vector__XXX
+ SG_ BCM_Cmd : 52|4@1+ (1,0) [0|0] "" WHJ_Vehicle
+ SG_ Gear_Cmd : 48|4@1+ (1,0) [0|15] "" WHJ_Vehicle
+ SG_ aReqMax_Cmd : 24|16@1+ (0.01,-10.23) [0|0] "m/s^2" WHJ_Vehicle
+ SG_ Steer_Cmd : 0|16@1- (0.1,0) [-3276.8|3276.7] "deg" WHJ_Vehicle
+BO_ 342 MoConf: 8 MoConf
+ SG_ AGM_Brake_ACT : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ASM_StopRequest : 20|1@1+ (1,0) [0|1] "" WHJ_Vehicle
+ SG_ BCM_En : 40|1@1+ (1,0) [0|0] "" WHJ_Vehicle
+ SG_ Mo_AlvCnt : 56|8@1+ (1,0) [0|255] "" WHJ_Vehicle
+ SG_ APM_Slevel : 8|8@1+ (2,0) [0|510] "" WHJ_Vehicle
+ SG_ APM_IGNORE : 2|1@1+ (1,0) [0|1] "" WHJ_Vehicle
+ SG_ AGM_En : 32|1@1+ (1,0) [0|1] "" WHJ_Vehicle
+ SG_ ASM_En : 16|1@1+ (1,0) [0|1] "" WHJ_Vehicle
+ SG_ APM_En : 0|1@1+ (1,0) [0|1] "" WHJ_Vehicle
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ BO_ 1823 "UMS";
+CM_ SG_ 1823 ACC_Enable "This signal is very important.. When car turn on autonomous driving mode, if this signal is off for 1sec, then car's tcu is malfuction.";
+CM_ SG_ 1810 AGM_Fd_ErrBit_PT "PT: Power Train part";
+CM_ BO_ 1809 "UMS";
+CM_ BO_ 1808 "UMS";
+CM_ BO_ 343 "UMS";
+CM_ BO_ 342 "UMS";
+CM_ SG_ 342 APM_Slevel "Slevel : Angle Speed Level ( it means Steer Angle speed control command in preversion)
+1 level is incremented by 2deg/s ";
+CM_ SG_ 342 APM_IGNORE "ignore Override";
+BA_DEF_ BO_ "Period" INT 0 1000;
+BA_DEF_ BO_ "GenMsgSendType" ENUM "Cyclic";
+BA_DEF_ "Baudrate" INT 500000 500000;
+BA_DEF_ "BusType" STRING ;
+BA_DEF_DEF_ "Period" 10;
+BA_DEF_DEF_ "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_ "Baudrate" 500000;
+BA_DEF_DEF_ "BusType" "CAN";
+BA_ "Period" BO_ 1823 20;
+BA_ "Period" BO_ 1810 20;
+BA_ "Period" BO_ 1809 20;
+BA_ "Period" BO_ 1808 20;
+BA_ "Period" BO_ 343 20;
+BA_ "Period" BO_ 342 20;
+VAL_ 3221225472 ASM_aeb_seq 4 "AEB_Stop" 3 "AEB_WAarn3" 2 "AEB_Warn2" 1 "AEB_Warn1" 0 "AEB_None" ;
+VAL_ 1810 AGM_Fd_Shift_cmd 7 "Rear level" 6 "Neutral level" 5 "Driving level" 0 "Parking level" ;
+VAL_ 343 BCM_Cmd 7 "reserved" 6 "reserved" 5 "reserved" 4 "reserved" 3 "Hazardous sig" 2 "Right_Turn_Sig" 1 "Left_Turn_Sig" 0 "None" ;
+VAL_ 343 Gear_Cmd 7 "Rear level" 6 "Neutral level" 5 "Driving level" 0 "Parking level" ;
+VAL_ 342 ASM_En 2 "ASM_En_Engaged" 1 "ASM_En_Rdy" 0 "ASM_Disable" ;
